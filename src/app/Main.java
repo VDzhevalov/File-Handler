@@ -1,17 +1,10 @@
 package app;
 
-import static app.config.FileFolderConfig.*;
-import static app.utils.Printer.printContent;
-import static app.utils.Printer.printResult;
+import app.utils.AppStarter;
 
 public class Main {
 
     public static void main(String[] args) {
-        FileHandler handler = new FileHandler();
-        String fileContent = "My very important information.";
-        String result = handler.writeFile(FULL_FILE_PATH, fileContent);
-        String content = handler.readFile(FULL_FILE_PATH);
-        printResult(result);
-        printContent(content);
+        AppStarter.runApp();
     }
 }
