@@ -4,7 +4,8 @@
 
 #### Формат виведення:
 ```
-RESULT: Success.
+RESULT: Directory files already exists
+RESULT: Success. All data saved to the file: files/myfile.txt
 FILE CONTENT: My very important information.
 ```
 
@@ -12,10 +13,15 @@ FILE CONTENT: My very important information.
 
 ```
 /
-├── files/                     # Діректорія для роботи з файлом
-│                            
-├── src/app/                   # Файли проекту
-│   
+├── files/                      # Діректорія для роботи з файлом
+│   ├──                             # тут має з'являтись файл
+├── src/app/                    # Файли проекту
+│   ├── config/                     # Конфігурація: директорія, ім'я файлу, розширення файлу.
+│   ├── controller/                 # Головний контроллер  
+│   ├── model/                      # Хендлери для роботи з файлами (читання/запис) та діректоріями (існування/створення).
+│   ├── utils/                      # Вивод результатів, Стартер додатку
+│   └── view/                       # Постачальник даних
+│
 ├── .gitignore
 └── README.md
 ```
