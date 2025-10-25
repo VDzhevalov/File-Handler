@@ -9,7 +9,7 @@ public class FileHandler {
     public String writeFile(String fileName, String fileContent) {
         try(FileWriter fw = new FileWriter(fileName)) {
             fw.write(fileContent);
-            return "Success.";
+            return "Success. All data saved to the file: " + fileName;
         } catch (Exception e) {
             return  "Error: something went wrong" + e.getMessage();
         }
